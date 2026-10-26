@@ -1,0 +1,17 @@
+{
+  "source": "https://github.com/opencv/opencv/blob/4.x/samples/data/vtest.avi",
+  "sha256": "45cddc9490be69345cbdab64ca583be65987e864ca408038e648db99e10516cf",
+  "width": 768,
+  "height": 576,
+  "fps": 10.0,
+  "frames": 795,
+  "duration": 79.5,
+  "demo_source_range_seconds": [
+    2,
+    14
+  ],
+  "demo_frames": 120,
+  "opencv": "4.10.0",
+  "results": "Actual OpenCV outputs. HOG scores are SVM decision margins, not calibrated probabilities. No detection ground truth is supplied.",
+  "license_note": "Source sample and derived teaching media are attributed above. Public deployment for this site was approved by the site owner on 2026-10-27."
+}
