@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="CellBit 视觉算法演示台：由教师逐步演示采集、采样、时间定位、对象匹配与变化检测。"><title>CellBit Lab · 从视频到变化</title><link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="lab.css"><script src="math.js" defer></script><script src="lab.js" defer></script></head>
+<body>
+<a href="#demo-stage" class="skip">跳至演示</a>
+<header><a class="brand" href="../index.html">CELL<span>/</span>BIT <small>LAB</small></a><span class="header-title">教师演示 · 也可按键盘右箭头前进</span><div><button id="next-top" class="primary">推进一步 →</button> <button id="fullscreen">全屏演示</button></div></header>
+<main>
+<aside><p class="eyebrow">ALGORITHM PLAYGROUND</p><h1>把算法<br>拆开看。</h1><p class="intro">教师主导演示 · 无需登录<br>不上传文件，不调用模型API</p><nav id="nav" aria-label="选择演示"></nav><a class="reading" href="sources.html">论文与资料 ↗</a></aside>
+<section class="workspace" id="demo-stage" tabindex="-1"><div class="section-top"><span id="demo-index" class="eyebrow"></span><span class="tag">可复算的教学示意 · 非神经网络实测</span></div><h2 id="title"></h2><p id="subtitle"></p>
+<div class="display"><canvas id="view" width="1100" height="470" role="img" aria-label="算法输入、中间过程和输出可视化"></canvas><div id="html-view" hidden></div></div>
+<div class="readout" id="readout" aria-live="polite"></div><div id="controls" class="controls"></div>
+<div class="tour"><div><span class="eyebrow">教师演示脚本</span><strong id="step-title"></strong><p id="step-text"></p></div><div class="tour-buttons"><button id="reset">从头演示</button><button class="primary" id="next">下一步 →</button><button id="play">自动播放</button></div></div>
+<details><summary>本例的输入、计算与适用边界</summary><p id="limits"></p><pre id="formula"></pre></details>
+<footer>从现象 → 数值 → 方法 → 局限。每次只改变一个条件。</footer>
+</section></main></body></html>

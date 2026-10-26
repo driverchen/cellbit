@@ -1,0 +1,17 @@
+const assert=require('node:assert/strict');
+const m=require('./math.js');
+assert.equal(m.iou([0,0,10,10],[0,0,10,10]),1);
+assert.equal(m.iou([0,0,10,10],[20,0,10,10]),0);
+assert.ok(Math.abs(m.iou([0,0,160,160],[64,0,160,160])-3/7)<1e-10);
+assert.equal(m.tiou([10,12],[11,13]),1/3);
+assert.equal(m.tiou([0,2],[3,5]),0);
+assert.equal(m.sample(1,0).filter(n=>n>=48&&n<56).length,0);
+assert.equal(m.sample(1,18).filter(n=>n>=48&&n<56).length,1);
+assert.equal(m.sample(5,0).filter(n=>n>=48&&n<56).length,2);
+assert.deepEqual(m.segments([0,.8,.9,0,.8],.5,.25),[[.25,.75],[1,1.25]]);
+assert.deepEqual(m.segments([0,0],.5),[]);
+assert.deepEqual(m.segments([1,1],.5),[[0,2]]);
+assert.deepEqual(m.smooth([0,1,0],3),[.5,1/3,.5]);
+assert.deepEqual(m.assignment([[1,2,8],[1.1,9,8],[8,7,1]]),{cost:4.1,cols:[1,0,2]});
+assert.equal(m.nms([{id:'a',box:[0,0,10,10],score:.9},{id:'b',box:[1,1,10,10],score:.8}],.5).kept.length,1);
+console.log('PASS: 14 algorithm assertions');
